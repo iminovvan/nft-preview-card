@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.card {
+    background-color: hsl(216, 50%, 16%);
+    width: 300px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 50px auto;
+    box-shadow: -10px 10px 50px 5px  hsl(213, 53%, 7%);
+    &__img {
+        position: relative;
+        img {
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+            display: block;
+        }
+    }
+
+    &__img:hover {
+        .card__img_overlay {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    &__img_overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: hsla(178, 100%, 50%, 0.5);
+        border-radius: 10px;
+        img {
+            position: absolute;
+            width: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        display: none;
+    }
+
+
+
+
+    &__title {
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+        margin: 20px 0;
+    }
+    &__title:hover {
+        color: hsl(178, 100%, 50%);
+        cursor: pointer;
+    }
+
+    &__text {
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .card__row_1, .card__row_2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card__eth {
+            color: hsl(178, 100%, 50%);
+            font-weight: 600;
+        }
+        .card__days {
+            color: hsl(215, 51%, 70%);
+        }
+    }
+
+    hr {
+        border: none;
+        border-bottom: 2px solid hsl(215, 32%, 27%);
+        margin: 20px 0;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        img {
+            width: 40px;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        .card__creation {
+            color: hsl(215, 51%, 70%);
+            margin-left: 20px;
+        }
+        .name {
+            color: white;
+        }
+        .name:hover {
+            color: hsl(178, 100%, 50%);
+            cursor: pointer;
+        }
+    }
+}
+.attribution {
+    margin: 10px;
+    font-size: 13px;
+    color: white;
+}
+
+@media all and (max-width: 400px) {
+    .card {
+        max-width: 70%;
+    }
+}

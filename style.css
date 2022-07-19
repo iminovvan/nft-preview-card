@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+body {
+  background-color: hsl(217deg, 54%, 11%);
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background-color: hsl(216deg, 50%, 16%);
+  width: 300px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 50px auto;
+  box-shadow: -10px 10px 50px 5px hsl(213deg, 53%, 7%);
+}
+.card__img {
+  position: relative;
+}
+.card__img img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: block;
+}
+.card__img:hover .card__img_overlay {
+  display: block;
+  cursor: pointer;
+}
+.card__img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  border-radius: 10px;
+  display: none;
+}
+.card__img_overlay img {
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__title {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 20px 0;
+}
+.card__title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+.card__text {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.card__row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__row .card__row_1, .card__row .card__row_2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__row .card__eth {
+  color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
+}
+.card__row .card__days {
+  color: hsl(215deg, 51%, 70%);
+}
+.card hr {
+  border: none;
+  border-bottom: 2px solid hsl(215deg, 32%, 27%);
+  margin: 20px 0;
+}
+.card__author {
+  display: flex;
+  align-items: center;
+}
+.card__author img {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.card__author .card__creation {
+  color: hsl(215deg, 51%, 70%);
+  margin-left: 20px;
+}
+.card__author .name {
+  color: white;
+}
+.card__author .name:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  margin: 10px;
+  font-size: 13px;
+  color: white;
+}
+
+@media all and (max-width: 400px) {
+  .card {
+    max-width: 70%;
+  }
+}/*# sourceMappingURL=style.css.map */
